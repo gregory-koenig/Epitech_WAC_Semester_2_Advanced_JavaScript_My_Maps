@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>JavaScript Avancé - My Maps</title>
+
+	<meta name="viewport" content="initial-scale = 1.0" />
+    <meta charset="UTF-8" />
+
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+</head>
+<body>
+
+<h1>JavaScript Avancé - My Maps</h1>
+
+<!-- Route -->
+
+	<!-- Address -->
+<h3>Adresse</h3>
+
+<div>
+	<label for="input-start">Départ</label>
+	<input type="text" name="input-start" id="input-start" placeholder="Entrez une adresse de départ" />
+	
+	<label for="input-end">Arrivée</label>
+	<input type="text" name="input-end" id="input-end" placeholder="Entrez une adresse d'arrivée" />
+</div>
+
+	<!-- Coordinates -->
+<h3>Coordonnées</h3>
+
+<div>
+	<label for="input-start">Départ</label>
+	<input type="text" name="input-lat-start" id="input-lat-start" placeholder="Entrez une latitude de départ" />
+	<input type="text" name="input-start" id="input-long-start" placeholder="Entrez une longitude de départ" />
+
+	<label for="input-end">Arrivée</label>
+	<input type="text" name="input-end" id="input-lat-end" placeholder="Entrez une latitude d'arrivée" />
+	<input type="text" name="input-start" id="input-long-end" placeholder="Entrez une longitude d'arrivée" />
+</div>
+
+	<!-- Means of transportation -->
+<h3>Moyens de transport</h3>
+
+<div id="mode-selector" class="controls">
+	<input type="radio" name="type" id="changemode-walking" checked="checked">
+	<label for="changemode-walking">Pied</label>
+
+	<input type="radio" name="type" id="changemode-bicycling">
+	<label for="changemode-bicycling">Vélo</label>
+
+	<input type="radio" name="type" id="changemode-transit">
+	<label for="changemode-transit">Transports en commun</label>
+
+	<input type="radio" name="type" id="changemode-driving">
+	<label for="changemode-driving">Voiture</label>
+</div>
+
+
+<!-- Markers -->
+<h3>Marqueurs</h3>
+
+<div>
+	<button id="enable-markers" onclick="enableMarkers()">Activer les marqueurs</button>
+	<button id="disable-markers" onclick="disableMarkers()">Désactiver les marqueurs</button>
+	<button id="hide-markers" onclick="clearMarkers()">Cacher tous les marqueurs</button>
+	<button id="show-markers" onclick="showMarkers()">Montrer tous les marqueurs</button>
+	<button id="delete-markers" onclick="deleteMarkers()">Supprimer tous les marqueurs</button>
+</div>
+
+<!-- Map -->
+<div id="map"></div>
+Cliquez sur la carte pour ajouter des marqueurs après les avoir activés.</p>
+
+<!-- Scripts -->
+<script src="assets/js/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ3pyNny0weyjfbiADn9a8K6U9qfKhxe4&language=fr&libraries=places&callback=initMap" async defer></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: gainsboro;
+
+	text-align: center;
+}
+
+#map {
+	width: 800px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+
+	border: 4px ridge gray;
+    border-radius: 15px;
+
+	text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+	#map {
+		width:100%;
+	}
+}
